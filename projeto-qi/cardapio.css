@@ -1,0 +1,201 @@
+#logotop{
+    width: 80px;
+    object-fit: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ff7b00;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6205a5, #9f5adb);
+    color: white;
+    position: relative;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    transform: scale(1.1);
+    color: #ddd;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.social-icons i {
+    font-size: 30px;
+    color: white;
+    transition: 0.25s;
+}
+
+.social-icons a:hover i {
+    color: rgb(192, 125, 255);
+    transform: scale(1.2);
+}
+
+.social-icons a:active i {
+    color: #25d366;
+    transform: scale(1.3);
+}
+
+.menu-title {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #4b0082, #9d4edd);
+    color: white;
+}
+
+.menu-title h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+.container {
+    padding: 30px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    height: 420px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #4b0082;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #7b2cbf;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #6205a5, #9f5adb);
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 0 auto;
+    }
+
+    .social-icons {
+        position: absolute;
+        right: 20px;
+    }
+
+    .menu-title h1 {
+        font-size: 28px;
+    }
+}

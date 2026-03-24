@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ff7b00;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #6205a5, #9f5adb);
+  color: white;
+}
+
+.logo img {
+  width: 90px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+/* LINKS DA NAV (SEM BORDA/SEM FUNDO) */
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  transform: scale(1.05);
+  color: #ddd;
+}
+
+/* LINHA ANIMADA */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ÍCONES */
+.icons i {
+  color: white;
+  font-size: 26px;
+  margin-left: 15px;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  color: rgb(192, 125, 255);
+  transform: scale(1.2);
+}
+
+/* BANNER */
+.banner {
+  background: linear-gradient(135deg, #4b0082, #9d4edd);
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 20px 20px;
+}
+
+/* CARROSSEL */
+.carousel {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 15px;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* BOTÕES DO CARROSSEL */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* BOTÃO PEDIDO */
+.pedido {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.botao-pedido {
+  text-decoration: none;
+  background: linear-gradient(180deg, #7fff00, #2e8b57);
+  padding: 20px 50px;
+  border-radius: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 8px 0 #1f5e3d;
+  transition: 0.2s;
+}
+
+.botao-pedido:hover {
+  transform: scale(1.05);
+}

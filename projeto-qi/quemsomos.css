@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ff7b00;
+  color: #333;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #6205a5, #9f5adb);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.navbar img {
+  width: 70px;
+  height: auto;
+  object-fit: contain;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  transform: scale(1.05);
+  color: #ddd;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.icons a {
+  margin-left: 15px;
+}
+
+.icons i {
+  font-size: 26px;
+  color: white;
+  transition: 0.3s;
+}
+
+.icons i:hover {
+  color: rgb(192, 125, 255);
+  transform: scale(1.2);
+}
+
+.banner {
+  background: linear-gradient(135deg, #4b0082, #9d4edd);
+  padding: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 40px;
+}
+
+.conteudo {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.conteudo p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #6205a5, #9f5adb);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+}
