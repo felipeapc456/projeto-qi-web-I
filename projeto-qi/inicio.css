@@ -29,7 +29,6 @@ nav {
   gap: 25px;
 }
 
-/* LINKS DA NAV (SEM BORDA/SEM FUNDO) */
 nav a {
   position: relative;
   text-decoration: none;
@@ -44,7 +43,6 @@ nav a:hover {
   color: #ddd;
 }
 
-/* LINHA ANIMADA */
 nav a::after {
   content: "";
   position: absolute;
@@ -60,7 +58,6 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* ÍCONES */
 .icons i {
   color: white;
   font-size: 26px;
@@ -73,7 +70,6 @@ nav a:hover::after {
   transform: scale(1.2);
 }
 
-/* BANNER */
 .banner {
   background: linear-gradient(135deg, #4b0082, #9d4edd);
   padding: 40px 0;
@@ -82,7 +78,6 @@ nav a:hover::after {
   border-radius: 0 0 20px 20px;
 }
 
-/* CARROSSEL */
 .carousel {
   position: relative;
   width: 300px;
@@ -105,7 +100,6 @@ nav a:hover::after {
   display: block;
 }
 
-/* BOTÕES DO CARROSSEL */
 .prev, .next {
   position: absolute;
   top: 50%;
